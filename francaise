@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ohmyfood</title>
+    <script src="https://kit.fontawesome.com/b6d3634ed2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="back">
+                <a href="index.html">
+                    <i class="fas fa-map-marker-alt icon-select"></i>
+                </a>
+            </div>
+            <div id="sticky-header">
+                <figure id="logo">
+                    <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="ohmyfood logo">
+                </figure>
+            </div>
+        </header>
+        <main>
+            <section id="search-results">
+                <figure class="selected-img">
+                    <img src="Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="une femme tenant une assiette à table dans un restaurant">
+                </figure>
+                <h1>À la française</h1>
+                <div class="heart">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="dish-category">
+                    <p class="result-title">ENTRÉES</p>
+                    <div class="dish">
+                        <h3>Tartare de poulpe acidulé</h3>
+                        <p>Aux zests d'orange</p>
+                        <p><b>25€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <h3>Velouté de légumes d'antan</h3>
+                        <p>Carotte, panais, topinambour</p>
+                        <p><b>35€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <h3>Tartare de poulpe acidulé</h3>
+                        <p>Aux zests d'orange</p>
+                        <p><b>25€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-category">
+                    <p class="result-title">PLATS</p>
+                    <div class="dish">
+                        <h3>Coquille Saint-Jacques</h3>
+                        <p>Accompagnées d'une purée de panais</p>
+                        <p><b>40€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <h3>Magret de canard</h3>
+                        <p>Et parmentier de pommes de terres</p>
+                        <p><b>35€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                        <p><b>44€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-category">
+                    <p class="result-title">DESSERTS</p>
+                    <div class="dish">
+                        <h3>Pétales de violettes glacés</h3>
+                        <p>Et purée de noisettes</p>
+                        <p><b>18€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <h3>Fondant au chocolat</h3>
+                        <p>Revisité</p>
+                        <p><b>22€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <h3>Millefeuille croustillant</h3>
+                        <p><b>Myrtilles et pâte d'amande</b></p>
+                        <p><b>23€</b></p>
+                        <div class="validated">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <button class="purple-button">
+                    <a href="#">Commander</a>
+                </button>
+            </section>
+        </main>
+        <footer>
+            <div id="footer-direction">
+                <figure id="footer-logo">
+                    <img src="Maquettes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="ohmyfood logo">
+                </figure>
+                <p id="footer-food">Proposer un restaurant</p>
+                <p id="footer-help">Devenir partenaire</p>
+                <p>Mentions légales</p>
+                <p>Contact</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+</html>
