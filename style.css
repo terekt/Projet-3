@@ -1,4 +1,276 @@
+/* factorisation / common rules */
+
 * {
     margin: 0;
     padding: 0;
+}
+
+a, p, h1, h2, h3, ::placeholder {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+a, p, ::placeholder {
+    font-size: 16px;
+    color: #1E1E1E;
+}
+
+h1, h2, h3 {
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+img {
+    object-fit: cover;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+#container
+ {
+    max-width: 993px;
+    margin: 0 auto 0 auto;
+}
+
+header, #sticky-header, #search, #search-placeholder {
+    width: 100%;
+}
+
+#search-placeholder::placeholder, h1, #search p, #purple-button a {
+    text-align: center;
+}
+
+#search-placeholder::placeholder, h1, #purple-button a {
+    font-weight: bold;
+}
+
+#sticky-header, #search-content, .working-step, #working-container, #phone-icon, #menu-icon, #shop-icon, .step-number, #result-container, .result, .new, #footer-direction {
+    display: flex;
+}
+
+#search-content, #working-container, #result-container, #footer-direction {
+    flex-direction: column;
+}
+
+#sticky-header, #phone-icon, #menu-icon, #shop-icon, .step-number, .new {
+    justify-content: center;
+}
+
+#sticky-header, .working-step, .step-number, .new {
+    align-items: center;
+}
+
+#working-container, #footer-direction {
+    justify-content: space-around;
+}
+
+.purple-button {
+    cursor: pointer;
+}
+
+#working, #search-results, footer {
+    padding: 0 20px 0 20px;
+}
+
+.purple-button a, .step-number p, footer p, .white-icon, footer a  {
+    color: white;
+}
+
+#phone-icon, #menu-icon, #shop-icon {
+    width: 20px;
+    margin: 0 20px 0 5px;
+}
+
+#search-placeholder, .gps, .step-number, .new {
+    position: relative;
+}
+
+/* ohmyfood top bar */
+
+#sticky-header {
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 1px 3px 2px rgb(0 0 0 / 12%);
+}
+
+#logo {
+    margin-top: 10px;
+}
+
+#logo img{
+    width: 200px;
+}
+
+/* search form */
+
+#search {
+    height: 100%;
+    background-color: #F6F6F6;
+}
+
+.gps {
+    top: 15px;
+    left: 115px;
+    z-index: 1;
+}
+
+#search-placeholder {
+    bottom: 18px;
+    border-style: none;
+    background-color: #EAEAEA;
+    height: 50px;
+}
+
+/* text below  */
+
+h1 {
+    width: 70%;
+    font-weight: 900;
+    margin: 25px auto 0 auto;
+}
+
+#search p {
+    font-size: 20px;
+    width: 90%;
+    margin: 10px auto 0 auto;
+}
+
+/* purple button */
+
+.purple-button {
+    background: linear-gradient(#ED73DA, #A35BDC);
+    border: none;
+    box-shadow: 0px 1px 3px 2px rgb(0 0 0 / 12%);
+    height: 50px;
+    border-radius: 30px;
+}
+
+.submit-button {
+    margin: 30px auto 50px auto;
+}
+
+.purple-button a {
+    margin: 0 25px 0 25px;
+}
+
+
+/* How it's working section */
+
+#working h2 {
+    margin: 30px 0 10px 0;
+}
+
+#working-container {
+    height: 300px;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.working-step {
+    width: 95%;
+    background-color: #F6F6F6;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 2px rgb(0 0 0 / 8%), -1px 0px 3px rgb(0 0 0 / 8%);
+}
+
+.working-step p {
+    font-weight: bold;
+}
+
+.step-number {
+    right: 13px;
+    width: 25px;
+    height: 25px;
+    background-color: #9356DC;
+    border-radius: 30px;
+}
+
+.step-number p {
+    font-weight: normal;
+}
+
+.working-icon {
+    color: #7E7E7E;
+}
+
+/* results */
+
+#search-results {
+    background-color: #F6F6F6;
+    padding: 60px 20px 60px 20px;
+}
+
+#search-results h2 {
+    margin-bottom: 20px;
+}
+
+#result-container {
+    height: 1050px;
+    justify-content: space-between;
+}
+
+.result {
+    border-radius: 20px;
+    background-color: white;
+    height: 250px;
+    box-shadow: 0px 4px 8px 2px rgb(0 0 0 / 8%);
+}
+
+.result figure {
+    width: 100%;
+}
+
+.result figure a img {
+    height: 70%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.new {
+    bottom: 160px;
+    left: 277px;
+    height: 28px;
+    width: 83px;
+    background-color: #99E2D0;
+    border-radius: 2px;
+}
+
+.new p {
+    font-weight: bold;
+    color: #008766;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.hollow {
+    color: black;
+}
+
+/* footer */
+
+footer {
+    padding: 20px;
+    background-color: #353535;
+}
+
+#footer-direction {
+    height: 130px;
+}
+
+#footer-logo {
+    filter: invert(100%) sepia(13%) saturate(1%) hue-rotate(94deg) brightness(106%) contrast(102%);
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+#footer-food, #footer-help {
+    display: flex;
+}
+
+.white-icon {
+    width: 30px
 }
