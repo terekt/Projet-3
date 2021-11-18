@@ -111,7 +111,7 @@ header, #sticky-header, #search, #search-placeholder {
 
 .gps {
     top: 15px;
-    left: 115px;
+    left: 30%;
     z-index: 1;
 }
 
@@ -230,7 +230,7 @@ h1 {
 
 .new {
     bottom: 160px;
-    left: 277px;
+    left: 80%;
     height: 28px;
     width: 83px;
     background-color: #99E2D0;
@@ -247,7 +247,24 @@ h3 {
 }
 
 .hollow {
-    color: black;
+    font-size: 24px;
+}
+
+.hollow:hover {
+    color: transparent;
+}
+
+.fade {
+    font-size: 25px;
+    position: relative;
+    right: 29px;
+    color: transparent;
+}
+
+.fade:hover {
+    background: linear-gradient(#A35BDC, #ED73DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* footer */
@@ -273,4 +290,15 @@ footer {
 
 .white-icon {
     width: 30px
+}
+
+
+@media all and (min-width: 769px) and (max-width: 992px) {
+/* Tablet */
+
+}
+
+@media all and (min-width: 993px) {
+/* Desktop */
+
 }
