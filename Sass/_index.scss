@@ -1,0 +1,135 @@
+.reserve {
+    text-align: center;
+
+    &__location {
+        background-color: darken($color-bg1, 5%);
+        margin: 0;
+        padding: 16px 0 16px 0;
+        max-width: 100%;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            display: inline-block;
+            margin-right: 12px;
+            width: 16px;
+            content: "\f3c5";
+        }
+    }
+
+    &__container {
+        padding: 32px;
+    }
+
+    &__title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin: 0;
+        font-weight: 300;
+    }
+
+    &__button {
+        margin-top: 32px;
+    }
+}
+
+.function {
+    background-color: $color-bg2;
+    margin: 0 -16px 0 -16px;
+    padding: 48px 16px 48px 16px;
+
+    @media (min-width: 1024px) {
+        border-radius: 32px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.step {
+    @include box;
+    background-color: $color-bg1;
+    margin: 16px 0 0 16px;
+    font-weight: 600;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+    height: 65px;
+    width: 100%;
+    max-width: 1023px;
+    
+    @media (min-width: 1024px) {
+        max-width: 315px;
+    }
+
+    &__text {
+        margin-top: 22px;
+    }
+
+    &:hover {
+        background-color: lighten($color-1, 35%);
+    }
+
+    &::before {
+        content: "1";
+        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        color: white;
+        background-color: $color-1;
+        padding: 4px 8px 4px 8px;
+        border-radius: 30px;
+        position: absolute;
+        left: -12px;
+        top: 22px;
+    }
+
+    @for $i from 1 through 3 {
+        &:nth-of-type(#{$i})::before {
+            content: "#{$i}";
+        }
+    }
+
+    &__text {
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            display: inline-block;
+            color: darken($color-bg1, 40%);
+            margin: 0 20px 0 24px;
+            width: 12px;
+        }
+    }
+
+    $step__content: (
+        1: "\f3cd",
+        2: "\f0ca",
+        3: "\f54e",
+    );
+    @each $i, $content in $step__content {
+        &:nth-of-type(#{$i}) .step__text::before {
+            content: "#{$content}";
+        }
+    }
+}
+
+.restaurants {
+    margin: 48px 0 48px 0;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
