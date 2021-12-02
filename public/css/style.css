@@ -460,9 +460,13 @@ footer ul a {
   padding: 5px;
   background-color: #f6f6f6;
   transition-duration: 0.5s;
+  transform: rotate(-360deg);
 }
 article:hover .choice__confirm {
   margin-right: 0px;
+}
+article:hover .choice__confirm::after {
+  transform: rotate(0);
 }
 
 /* Chain apparition animation */
