@@ -1,4 +1,3 @@
-/* for responsive */
 @mixin container {
     max-width: 1024px;
     margin-left: auto;
@@ -7,24 +6,24 @@
 }
 
 /* Header */
-header {  
+header {
     padding: $padding-app;
     background-color: $color-bg2;
     box-shadow: 0 0 10px $color-shadow;
     position: relative;
     padding: 16px 16px 8px 16px;
-    
+
     .header__logo {
-      font-family: "Shrikhand", "cursive";
-      font-size: 30px;
-      text-align: center;
-      line-height: 36px;
+        font-family: "Shrikhand", "cursive";
+        font-size: 30px;
+        text-align: center;
+        line-height: 36px;
     }
 
     .header--arrow {
         position: relative;
-      }
-    
+    }
+
     a::before {
         content: "\f060";
         font-family: "Font Awesome 5 Free";
@@ -37,7 +36,7 @@ header {
         font-size: 20px;
         color: black;
     }
-  }
+}
 
 /* Main */
 main {
@@ -51,44 +50,44 @@ footer {
     background-color: $color-bg3;
     padding: $padding-app;
 
-    .footer_container {
+    .footer-container {
         @include container;
-    }
 
-    .footer__logo {
-        color: white;
-        font-family: "Shrikhand", "cursive";
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            margin: 8px 0 8px 0;
-
-            &:before {
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                display: inline-block;
-                color: white;
-                width: 25px;
-            }
-
-            &:first-child::before {
-                content: "\f2e7";
-            }
-            &:nth-of-type(2)::before {
-                content: "\f4c4";
-            }
-        }
-    
-        a {
+        &__logo {
             color: white;
-            text-decoration: none;
+            font-family: "Shrikhand", "cursive";
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 8px 0 8px 0;
+
+                &:before {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    display: inline-block;
+                    color: white;
+                    width: 25px;
+                }
+
+                &:first-child::before {
+                    content: "\f2e7";
+                }
+                &:nth-of-type(2)::before {
+                    content: "\f4c4";
+                }
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }

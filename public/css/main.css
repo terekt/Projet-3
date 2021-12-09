@@ -46,17 +46,17 @@ h4 {
 
 button {
   border: 0;
-  padding: 16px;
+  padding: 16px 32px 16px 32px;
   font-size: 16px;
   border-radius: 100px;
   color: white;
   background-image: linear-gradient(0, #9356DC, #FF79DA);
-  cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-button a {
   text-decoration: none;
-  color: inherit;
+}
+button:hover {
+  background-image: linear-gradient(0, #a16be0, #ff93e1);
+  cursor: pointer;
 }
 
 article {
@@ -128,6 +128,42 @@ article .article__heart:hover::after {
   background-clip: text;
 }
 
+/* loader */
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #9356DC;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
 .reserve {
   text-align: center;
 }
@@ -253,7 +289,37 @@ article .article__heart:hover::after {
   justify-content: space-between;
 }
 
-/* for responsive */
+@keyframes appear1 {
+  to {
+    opacity: 0;
+    overflow: auto;
+    z-index: -1;
+  }
+}
+@keyframes appear2 {
+  to {
+    overflow: auto;
+  }
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 1;
+  animation: 0.5s ease-in 2s forwards appear1;
+}
+
+.preload {
+  overflow: hidden;
+  animation: 0.5s ease-in 2s forwards appear2;
+}
+
 /* Header */
 header {
   padding: 16px;
@@ -299,40 +365,40 @@ footer {
   background-color: #353535;
   padding: 16px;
 }
-footer .footer_container {
+footer .footer-container {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-footer .footer__logo {
+footer .footer-container__logo {
   color: white;
   font-family: "Shrikhand", "cursive";
   font-size: 20px;
   margin-bottom: 8px;
 }
-footer ul {
+footer .footer-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-footer ul li {
+footer .footer-container ul li {
   margin: 8px 0 8px 0;
 }
-footer ul li:before {
+footer .footer-container ul li:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   display: inline-block;
   color: white;
   width: 25px;
 }
-footer ul li:first-child::before {
+footer .footer-container ul li:first-child::before {
   content: "\f2e7";
 }
-footer ul li:nth-of-type(2)::before {
+footer .footer-container ul li:nth-of-type(2)::before {
   content: "\f4c4";
 }
-footer ul a {
+footer .footer-container ul a {
   color: white;
   text-decoration: none;
 }
@@ -413,6 +479,21 @@ footer ul a {
   position: relative;
   display: flex;
   margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  cursor: pointer;
+}
+.choice article:nth-of-type(1) {
+  animation: 0.5s ease-in 0.2s forwards fadeinopacity;
+}
+.choice article:nth-of-type(2) {
+  animation: 0.5s ease-in 0.4s forwards fadeinopacity;
+}
+.choice article:nth-of-type(3) {
+  animation: 0.5s ease-in 0.6s forwards fadeinopacity;
+}
+.choice article:nth-of-type(4) {
+  animation: 0.5s ease-in 0.8s forwards fadeinopacity;
 }
 .choice__article h4 {
   white-space: nowrap;
@@ -469,12 +550,11 @@ article:hover .choice__confirm::after {
   transform: rotate(0);
 }
 
-/* Chain apparition animation */
-@keyframes chainappear {
+@keyframes fadeinopacity {
   to {
     opacity: 1;
-    top: 0;
+    transform: translateY(0);
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
